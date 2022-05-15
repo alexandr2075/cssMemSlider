@@ -4,7 +4,7 @@ body {
     overflow: hidden;
 } 
 .container {
-    width: 35rem;
+    max-width: 35rem;
     height: 26rem;
     border: 2.5rem solid black;
     margin: 6rem auto;
@@ -31,18 +31,6 @@ body {
 input[name="mem"] {
     display: none;
   }
-#inp1:checked ~ #lab1 {
-    background-color: gold;
-}
-#inp2:checked ~ #lab2 {
-    background-color: gold;
-}
-#inp3:checked ~ #lab3 {
-    background-color: gold;
-}
-#inp4:checked ~ #lab4 {
-    background-color: gold;
-}
 #inp1:checked ~ #slEl1 {
     margin-left: 0%;
 }
@@ -61,21 +49,29 @@ input[name="mem"] {
     float: right;
     margin-top: -2rem;
 }
-
+@media screen and (max-width: 480px) {
+    .navigation {
+        width: 5rem;
+        height: 1.1rem;
+        float: none;
+        margin: -2.8rem auto 0;
+    }
+  }
 .bar {
-    width: 1rem;
-    height: 1rem;
-    border: .8rem solid black;
+    width: .7rem;
+    height: .7rem;
+    border: .5rem solid black;
     border-radius: 50%;
     cursor: pointer;
-    transition: all .4s ease;
+    transition: all .2s ease;
     background-color: rgb(29, 115, 165);
 }
-.bar:link {
-    background-color: khaki;
-}
-.bar:visited {
-    background-color: lawngreen;
+@media screen and (max-width: 480px) {
+    .bar {
+        width: .5rem;
+        height: .5rem;
+        border: .4rem solid black;
+    }
 }
 .bar:hover {
     transform: scale(1.2);
@@ -83,13 +79,12 @@ input[name="mem"] {
 .bar:active {
     background-color: white;
 }
-.bar:checked {
-    background-color: orange;
-}
 #text {
     color: white;
     margin-top: 1.6rem;
 }
-#inp1:checked ~ .t1 {
-    display: block;
+@media screen and (max-width: 480px) {
+    #text {
+        text-align: center;
+    }
 }
