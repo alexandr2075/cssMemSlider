@@ -1,10 +1,11 @@
 body {
     padding: 0 2rem;
     box-sizing: border-box;
+    overflow: hidden;
 } 
 .container {
     width: 35rem;
-    height: 31rem;
+    height: 26rem;
     border: 2.5rem solid black;
     margin: 6rem auto;
     background-color: black;
@@ -14,14 +15,13 @@ body {
     display: flex;
     width: 400%;
     height: 23rem;
-    
+   
     
 }
 .slider_element {
     width: 25%;
     height: 20rem;
     transition: all .6s ease;
-    
 }
 .slider_element img {
     width: 100%;
@@ -58,14 +58,18 @@ input[name="mem"] {
 
 .navigation {
     display: flex;
+    float: right;
+    margin-top: -2rem;
 }
+
 .bar {
     width: 1rem;
     height: 1rem;
-    border: .2rem solid blueviolet;
+    border: .8rem solid black;
+    border-radius: 50%;
     cursor: pointer;
     transition: all .4s ease;
-    background-color: red;
+    background-color: rgb(29, 115, 165);
 }
 .bar:link {
     background-color: khaki;
@@ -84,7 +88,7 @@ input[name="mem"] {
 }
 #text {
     color: white;
-    margin-top: 1rem;
+    margin-top: 1.6rem;
 }
 #inp1:checked ~ .t1 {
     display: block;
