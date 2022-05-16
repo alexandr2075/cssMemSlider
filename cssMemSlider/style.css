@@ -1,0 +1,90 @@
+body {
+    padding: 0 2rem;
+    box-sizing: border-box;
+    overflow: hidden;
+} 
+.container {
+    max-width: 35rem;
+    height: 26rem;
+    border: 2.5rem solid black;
+    margin: 6rem auto;
+    background-color: black;
+    overflow: hidden;
+}
+.slider {
+    display: flex;
+    width: 400%;
+    height: 23rem;
+   
+    
+}
+.slider_element {
+    width: 25%;
+    height: 20rem;
+    transition: all .6s ease;
+}
+.slider_element img {
+    width: 100%;
+    height: 100%;
+    
+}
+input[name="mem"] {
+    display: none;
+  }
+#inp1:checked ~ #slEl1 {
+    margin-left: 0%;
+}
+#inp2:checked ~ #slEl1 {
+    margin-left: -25%;
+}
+#inp3:checked ~ #slEl1 {
+    margin-left: -50%;
+}
+#inp4:checked ~ #slEl1 {
+    margin-left: -75%;
+}
+
+.navigation {
+    display: flex;
+    float: right;
+    margin-top: -2rem;
+}
+@media screen and (max-width: 480px) {
+    .navigation {
+        width: 5rem;
+        height: 1.1rem;
+        float: none;
+        margin: -2.8rem auto 0;
+    }
+  }
+.bar {
+    width: .7rem;
+    height: .7rem;
+    border: .5rem solid black;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all .2s ease;
+    background-color: rgb(29, 115, 165);
+}
+@media screen and (max-width: 480px) {
+    .bar {
+        width: .5rem;
+        height: .5rem;
+        border: .4rem solid black;
+    }
+}
+.bar:hover {
+    transform: scale(1.2);
+}
+.bar:active {
+    background-color: white;
+}
+#text {
+    color: white;
+    margin-top: 1.6rem;
+}
+@media screen and (max-width: 480px) {
+    #text {
+        text-align: center;
+    }
+}
